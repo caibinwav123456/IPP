@@ -1,0 +1,9 @@
+attrib net area 
+
+class 0 0.5 str com n
+class 1 0.5
+str a b 5
+class 1 0.5
+str hom$e 5
+str horne 3
+str hm$$e 2

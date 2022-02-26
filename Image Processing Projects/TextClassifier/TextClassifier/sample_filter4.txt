@@ -1,0 +1,4 @@
+attrib career
+corr_th  0.8
+whole_word + 5
+class 0 0.5 str CEO

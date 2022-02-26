@@ -1,0 +1,289 @@
+#include "stdafx.h"
+#include "matutil.h"
+
+Vec2 operator+(Vec2 a,Vec2 b)
+{
+	return Vec2(a.x+b.x,a.y+b.y);
+}
+
+Vec2 operator-(Vec2 a,Vec2 b)
+{
+	return Vec2(a.x-b.x,a.y-b.y);
+}
+
+Vec2 operator*(Vec2 v,float a)
+{
+	Vec2 result=v;
+	result*=a;
+	return result;
+}
+
+Vec2 operator*(Vec2 v1,Vec2 v2)
+{
+	Vec2 result;
+	for(int i=0;i<2;i++)
+		result.elem[i]=v1.elem[i]*v2.elem[i];
+	return result;
+}
+
+Vec2 operator*(float a,Vec2 v)
+{
+	Vec2 result=v;
+	result*=a;
+	return result;
+}
+
+Vec2 operator/(Vec2 v,float a)
+{
+	Vec2 result=v;
+	result/=a;
+	return result;
+}
+
+float dot(Vec2 a,Vec2 b)
+{
+	return a.x*b.x+a.y*b.y;
+}
+
+float length(Vec2 v)
+{
+	return v.length();
+}
+
+Vec2 normalize(Vec2 v)
+{
+	return v.normalize();
+}
+
+Vec3 operator+(Vec3 a,Vec3 b)
+{
+	return Vec3(a.x+b.x,a.y+b.y,a.z+b.z);
+}
+
+Vec3 operator-(Vec3 a,Vec3 b)
+{
+	return Vec3(a.x-b.x,a.y-b.y,a.z-b.z);
+}
+
+Vec3 operator*(Vec3 v,float a)
+{
+	Vec3 result=v;
+	result*=a;
+	return result;
+}
+
+Vec3 operator*(float a,Vec3 v)
+{
+	Vec3 result=v;
+	result*=a;
+	return result;
+}
+
+Vec3 operator*(Vec3 v1,Vec3 v2)
+{
+	Vec3 result;
+	for(int i=0;i<3;i++)
+	{
+		result.elem[i]=v1.elem[i]*v2.elem[i];
+	}
+	return result;
+}
+
+Vec3 operator/(Vec3 v,float a)
+{
+	Vec3 result=v;
+	result/=a;
+	return result;
+}
+
+float dot(Vec3 a,Vec3 b)
+{
+	return a.x*b.x+a.y*b.y+a.z*b.z;
+}
+
+Vec3 cross(Vec3 a,Vec3 b)
+{
+	return Vec3(a.y*b.z-a.z*b.y,a.z*b.x-a.x*b.z,a.x*b.y-a.y*b.x);
+}
+
+float length(Vec3 v)
+{
+	return v.length();
+}
+
+Vec3 normalize(Vec3 v)
+{
+	return v.normalize();
+}
+
+Vec4 operator+(Vec4 a,Vec4 b)
+{
+	return Vec4(a.x+b.x,a.y+b.y,a.z+b.z,a.t+b.t);
+}
+
+Vec4 operator-(Vec4 a,Vec4 b)
+{
+	return Vec4(a.x-b.x,a.y-b.y,a.z-b.z,a.t-b.t);
+}
+
+Vec4 operator*(Vec4 v,float a)
+{
+	Vec4 result=v;
+	result*=a;
+	return result;
+}
+
+Vec4 operator*(float a,Vec4 v)
+{
+	Vec4 result=v;
+	result*=a;
+	return result;
+}
+
+Vec4 operator*(Vec4 v1,Vec4 v2)
+{
+	Vec4 result;
+	for(int i=0;i<4;i++)
+	{
+		result.elem[i]=v1.elem[i]*v2.elem[i];
+	}
+	return result;
+}
+
+Vec4 operator/(Vec4 v,float a)
+{
+	Vec4 result=v;
+	result/=a;
+	return result;
+}
+
+float dot(Vec4 a,Vec4 b)
+{
+	return a.x*b.x+a.y*b.y+a.z*b.z+a.t*b.t;
+}
+
+float length(Vec4 v)
+{
+	return v.length();
+}
+
+Vec4 normalize(Vec4 v)
+{
+	return v.normalize();
+}
+
+Mat transpose(Mat m)
+{
+	return m.trans();
+}
+
+Mat inv(Mat m)
+{
+	return m.inv();
+}
+
+Mat operator+(Mat a,Mat b)
+{
+	Mat result;
+	for(int i=0;i<3;i++)
+		for(int j=0;j<3;j++)
+			result.elem[i][j]=a.elem[i][j]+b.elem[i][j];
+	return result;
+}
+
+Mat operator-(Mat a,Mat b)
+{
+	Mat result;
+	for(int i=0;i<3;i++)
+		for(int j=0;j<3;j++)
+			result.elem[i][j]=a.elem[i][j]-b.elem[i][j];
+	return result;
+}
+
+Mat operator*(Mat m,float a)
+{
+	Mat result=m;
+	result*=a;
+	return result;
+}
+
+Mat operator*(float a,Mat m)
+{
+	Mat result=m;
+	result*=a;
+	return result;
+}
+
+Mat operator/(Mat m,float a)
+{
+	Mat result=m;
+	result/=a;
+	return result;
+}
+
+Vec3 operator*(Vec3 v,Mat m)
+{
+	Vec3 result(0,0,0);
+	for(int i=0;i<3;i++)
+		for(int j=0;j<3;j++)
+			result.elem[i]+=m.elem[j][i]*v.elem[j];
+	return result;
+}
+
+Mat4 transpose(Mat4 m)
+{
+	return m.trans();
+}
+
+Mat4 inv(Mat4 m)
+{
+	return m.inv();
+}
+
+Mat4 operator+(Mat4 a,Mat4 b)
+{
+	Mat4 result;
+	for(int i=0;i<4;i++)
+		for(int j=0;j<4;j++)
+			result.elem[i][j]=a.elem[i][j]+b.elem[i][j];
+	return result;
+}
+
+Mat4 operator-(Mat4 a,Mat4 b)
+{
+	Mat4 result;
+	for(int i=0;i<4;i++)
+		for(int j=0;j<4;j++)
+			result.elem[i][j]=a.elem[i][j]-b.elem[i][j];
+	return result;
+}
+
+Mat4 operator*(Mat4 m,float a)
+{
+	Mat4 result=m;
+	result*=a;
+	return result;
+}
+
+Mat4 operator*(float a,Mat4 m)
+{
+	Mat4 result=m;
+	result*=a;
+	return result;
+}
+
+Mat4 operator/(Mat4 m,float a)
+{
+	Mat4 result=m;
+	result/=a;
+	return result;
+}
+
+Vec4 operator*(Vec4 v,Mat4 m)
+{
+	Vec4 result(0,0,0,0);
+	for(int i=0;i<4;i++)
+		for(int j=0;j<4;j++)
+			result.elem[i]+=m.elem[j][i]*v.elem[j];
+	return result;
+}

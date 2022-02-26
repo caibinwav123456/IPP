@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TextClassifier", "TextClassifier\TextClassifier.vcxproj", "{4070B64A-B4FD-4D53-86CB-7B714228F585}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EFCE4246-DEE2-4419-88A2-809B48552B74} = {EFCE4246-DEE2-4419-88A2-809B48552B74}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TextClassify", "TextClassify\TextClassify.vcxproj", "{EFCE4246-DEE2-4419-88A2-809B48552B74}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_Dll|Win32 = Debug_Dll|Win32
+		Debug|Win32 = Debug|Win32
+		Release_Dll|Win32 = Release_Dll|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4070B64A-B4FD-4D53-86CB-7B714228F585}.Debug_Dll|Win32.ActiveCfg = Debug_Dll|Win32
+		{4070B64A-B4FD-4D53-86CB-7B714228F585}.Debug_Dll|Win32.Build.0 = Debug_Dll|Win32
+		{4070B64A-B4FD-4D53-86CB-7B714228F585}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4070B64A-B4FD-4D53-86CB-7B714228F585}.Debug|Win32.Build.0 = Debug|Win32
+		{4070B64A-B4FD-4D53-86CB-7B714228F585}.Release_Dll|Win32.ActiveCfg = Release_Dll|Win32
+		{4070B64A-B4FD-4D53-86CB-7B714228F585}.Release_Dll|Win32.Build.0 = Release_Dll|Win32
+		{4070B64A-B4FD-4D53-86CB-7B714228F585}.Release|Win32.ActiveCfg = Release|Win32
+		{4070B64A-B4FD-4D53-86CB-7B714228F585}.Release|Win32.Build.0 = Release|Win32
+		{EFCE4246-DEE2-4419-88A2-809B48552B74}.Debug_Dll|Win32.ActiveCfg = Debug_Dll|Win32
+		{EFCE4246-DEE2-4419-88A2-809B48552B74}.Debug_Dll|Win32.Build.0 = Debug_Dll|Win32
+		{EFCE4246-DEE2-4419-88A2-809B48552B74}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EFCE4246-DEE2-4419-88A2-809B48552B74}.Debug|Win32.Build.0 = Debug|Win32
+		{EFCE4246-DEE2-4419-88A2-809B48552B74}.Release_Dll|Win32.ActiveCfg = Release_Dll|Win32
+		{EFCE4246-DEE2-4419-88A2-809B48552B74}.Release_Dll|Win32.Build.0 = Release_Dll|Win32
+		{EFCE4246-DEE2-4419-88A2-809B48552B74}.Release|Win32.ActiveCfg = Release|Win32
+		{EFCE4246-DEE2-4419-88A2-809B48552B74}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

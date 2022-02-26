@@ -1,0 +1,47 @@
+attrib Tel Mobile Fax
+default 0
+corr_th 0.8
+
+class 0 0.5
+str Tel 5
+str TEL 5
+str Tei 3
+class 0 0.5
+str Tel: 5
+str TEL: 5
+str Tel; 4
+str Tei: 3
+class 0 0.7
+str Direct 5
+str DIRECT 5
+class 0 0.7
+str Direct: 5
+str DIRECT: 5
+str Direct; 4
+
+class 1 0.6
+str Mobile 5
+str MOBILE 5
+str Mobi1e 4
+str Mobiie 4
+class 1 0.6
+str Mobile: 5
+str MOBILE: 5
+str Mobi1e; 4
+str Mobiie; 4
+class 1 0.5
+str Cell 5
+str cell 5
+class 1 0.5
+str Mob 5
+str Hob 4
+class 1 0.5 str MB
+class 1 0.5 str MP
+
+class 2 0.5
+str Fax 5
+str FAX 5
+class 2 0.5
+str Fax: 5
+str FAX: 5
+str Fax; 4

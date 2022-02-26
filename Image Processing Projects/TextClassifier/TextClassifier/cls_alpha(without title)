@@ -1,0 +1,478 @@
+attrib Career Company Mail Address Url
+corr_th 0.8
+
+class 0 0.7
+str engineer 5
+str Engineer 5
+str engm$eer 4
+class 0 0.6
+str office 5
+str OFFICE 5
+class 0 0.6
+str sales 5
+str Sales 5
+str sa1es 4
+class 0 0.7
+str manager 5
+str Manager 5
+class 0 0.7
+str project 5
+str Project 5
+class 0 0.7
+str execute 5
+str Execute 5
+class 0 0.7
+str Service 5
+str Servlce 4
+str ServIce 4
+class 0 0.5
+str Law 5
+str LAW 5
+
+class 1 0.5
+str Ltd 5
+str LTD 5
+class 1 0.7
+str Limited 5
+str LIMITED 5
+class 1 0.5
+str Co. 5
+str CO. 5
+class 1 0.5
+str Inc 5
+str INC 5
+str 1nc 3
+str lnc 3
+class 1 0.5
+str .llc 5
+str .LLC 5
+class 1 0.5
+str .corp 5
+str .CORP 5
+class 1 0.7
+str FACTORY 5
+str factory 5
+class 1 0.7
+str M$ARKET 5
+str m$arket 5
+str rnarket 4
+
+class 2 0.5 str @
+bias 0.2
+class 2 0.6 
+str mail 5
+str MAIL 5
+str mai1 4
+str maiI 4
+str maii 4
+class 2 0.6 0.9
+corr_text #
+str mail: 5
+str MAIL: 5
+str mail; 4
+str mai1: 4
+str maiI: 4
+str maii: 4
+class 2 0.6 0.9
+corr_text #
+str Email: 5
+str EMAIL: 5
+str Email; 4
+str Emai1: 4
+str EmaiI: 4
+str Emaii: 4
+
+class 3 0.7
+str Building 5
+str BUILDING 5
+str Bui1ding 4
+class 3 0.5
+str Rd. 5
+str RD. 5
+class 3 0.5
+str Road 5
+str ROAD 5
+class 3 0.5
+str Str. 5
+class 3 0.6
+str Park 5
+str PARK 5
+str Pork 3
+class 3 0.6
+str Venture 5
+str venture 5
+str VENTURE 5
+class 3 0.6
+str District 5
+str DISTRICT 5
+str Distn$ct 3
+str Dism$$ct 3
+str m$strict 2
+str M$strict 2
+class 3 0.5
+str City 5
+str city 5
+class 3 0.6
+str State 5
+str state 5
+class 3 0.7
+str Province 5
+str province 5
+class 3 0.6
+str Island 5
+str island 5
+str 1s1and 4
+class 3 0.7
+str Floor 5
+str floor 5
+class 3 0.5
+str room 5
+str ROOM 5
+class 3 0.6
+str street 5
+str STREET 5
+class 3 0.7
+str Prairie 5
+str prairie 5
+class 3 0.6
+str East 5
+str EAST 5
+class 3 0.6
+str West 5
+str WEST 5
+class 3 0.6
+str North 5
+str NORTH 5
+class 3 0.6
+str South 5
+str SOUTH 5
+class 3 0.6
+str Ocean 5
+str OCEAN 5
+class 3 0.5
+str zone 5
+str ZONE 5
+class 3 0.5
+str AVE 5
+str Ave 5
+class 3 0.6 str Block
+class 3 0.6 str Shenzhen
+class 3 0.6 str China
+class 3 0.6 str Taiwan
+class 3 0.6 str Taipei
+class 3 0.5 str PRC
+class 3 0.5 str USA
+class 3 0.5 str US.
+class 3 0.5 str UK.
+
+ignore_case +
+#State names of the U.S.
+class 3 0.6 str Alabama        
+class 3 0.6 str Alaska         
+class 3 0.6 str Arizona        
+class 3 0.6 str Arkansas       
+class 3 0.6 str California      
+class 3 0.6 str Colorado        
+class 3 0.6 str Connecticut     
+class 3 0.6 str Delaware        
+class 3 0.6 str Florida         
+class 3 0.6 str Georgia         
+class 3 0.6 str Hawaii          
+class 3 0.6 str Idaho           
+class 3 0.6 str Illinois        
+class 3 0.6 str Indiana         
+class 3 0.6 str Iowa            
+class 3 0.6 str Kansas          
+class 3 0.6 str Kentucky        
+class 3 0.6 str Louisiana       
+class 3 0.6 str Maine           
+class 3 0.6 str Maryland        
+class 3 0.6 str Massachusetts   
+class 3 0.6 str Michigan        
+class 3 0.6 str Minnesota       
+class 3 0.6 str Mississippi     
+class 3 0.6 str Missouri        
+class 3 0.6 str Montana         
+class 3 0.6 str Nebraska        
+class 3 0.6 str Nevada          
+class 3 0.6 str New hampshire   
+class 3 0.6 str New jersey      
+class 3 0.6 str New mexico      
+class 3 0.6 str New york        
+class 3 0.6 str North carolina  
+class 3 0.6 str North dakota    
+class 3 0.6 str Ohio            
+class 3 0.6 str Oklahoma        
+class 3 0.6 str Oregon          
+class 3 0.6 str Pennsylvania    
+class 3 0.6 str Rhode island    
+class 3 0.6 str South carolina  
+class 3 0.6 str South dakota    
+class 3 0.6 str Tennessee       
+class 3 0.6 str Texas           
+class 3 0.6 str Utah            
+class 3 0.6 str Vermont         
+class 3 0.6 str Virginia        
+class 3 0.6 str Washington      
+class 3 0.6 str West virginia   
+class 3 0.6 str Wisconsin       
+class 3 0.6 str Wyoming    
+
+#European places
+class 3 0.6 str London
+class 3 0.6 str Paris
+class 3 0.6 str Berlin
+class 3 0.6 str France
+class 3 0.6 str German
+class 3 0.6 str England
+class 3 0.6 str Scotland
+class 3 0.6 str Wales
+class 3 0.6 str Italy
+class 3 0.6 str Greece
+class 3 0.6 str Holland
+class 3 0.6 str Dutch
+ignore_case -
+
+class 4 0.6
+str Http 5
+str HTTP 5
+class 4 0.6
+str www 5
+str WWW 5
+class 4 0.5
+str .cn 5
+str .CN 5
+class 4 0.5 str .uk
+class 4 0.5 str .net
+class 4 0.5 str .us
+class 4 0.5 str .gov
+class 4 0.5 str .org
+class 4 0.5 str .edu
+class 4 0.5
+str .com$ 5
+str .COM$ 5
+str .c0m$ 4
+str .coin 4
+str .corn 4
+
+#Compound Career
+class 0 0.7 str Assistant 
+class 0 0.7 str Clerk
+class 0 0.7 str Chairman
+class 0 0.7 str Supervisor
+class 0 0.7 str Representative
+class 0 0.7 str Staff
+class 0 0.7 str Analyst
+class 0 0.7 str Trader
+class 0 0.7 str Controller
+class 0 0.7 str Buyer
+class 0 0.7 str Cashier
+class 0 0.7 str Receptionist
+class 0 0.7 str Typist 
+class 0 0.7 str Secretary
+class 0 0.7 str Operator 
+class 0 0.7 str Copywriter
+class 0 0.7 str Technician
+class 0 0.7 str Instructor
+class 0 0.7 str Teacher
+class 0 0.7 str Reporter
+class 0 0.7 str Auditor
+class 0 0.7 str President
+class 0 0.7 str Actuary      
+class 0 0.7 str Interpreter
+class 0 0.7 str Adviser
+class 0 0.7 str Consult
+class 0 0.7 str Worker
+class 0 0.7 str Architect
+class 0 0.7 str Designer
+class 0 0.7 str Programmer
+class 0 0.7 str Salesperson
+class 0 0.7 str Registrar
+class 0 0.7 str Editor
+class 0 0.7 str Translator
+class 0 0.7 str Tourist Guide
+class 0 0.7 str Checker
+class 0 0.7 str Part Time 
+class 0 0.7 str Specialist 
+class 0 0.7 str Security 
+class 0 0.7 str Driver 
+class 0 0.7 str Chauffeur
+class 0 0.7 str Chief
+class 0 0.7 str Coach
+class 0 0.7 str Cook 
+class 0 0.7 str Trainer
+class 0 0.7 str Trainee
+class 0 0.7 str Intern
+class 0 0.7 str	Official
+class 0 0.7 str	Psychologist
+class 0 0.7 str	Coodinator
+class 0 0.7 str	Researcher
+class 0 0.7 str	Nurse
+class 0 0.7 str	Doctor 
+class 0 0.7 str	Tutor
+class 0 0.7 str	Lecturer
+class 0 0.7 str	Administrator 
+class 0 0.7 str	Lawyer
+class 0 0.7 str	Courier 
+class 0 0.7 str	Director
+class 0 0.7 str	Electrician
+whole_word + 5
+class 0 0.5 str	COO
+class 0 0.5 str	CFO
+class 0 0.5 str	CTO
+class 0 0.5 str	CIO
+class 0 0.5 str CEO
+whole_word -
+
+#Compound Url
+class 4 0.5 str	.int
+class 4 0.5 str	.mil
+class 4 0.5 str	.ac
+class 4 0.5 str	.arpa
+class 4 0.5 str	.biz
+class 4 0.5 str	.info
+class 4 0.5 str	.pro
+class 4 0.5 str	.aero
+class 4 0.5 str	.museum
+class 4 0.5 str	.asia
+class 4 0.5 str	.cc
+class 4 0.5 str	.tv
+class 4 0.5 str	.travel
+class 4 0.5 str	.idv
+
+ignore_case +
+#Compound address
+class 3 0.7 str Los Angeles
+class 3 0.7 str	Chicago
+class 3 0.7 str	Houston
+class 3 0.7 str	Philadelphia 
+class 3 0.7 str	Phoneix 
+class 3 0.7 str	San Diego    
+class 3 0.7 str	Dallas        
+class 3 0.7 str	San Antonio   
+class 3 0.7 str	Detroit        
+class 3 0.7
+str San Jose 5
+str San Jos¨¦ 5      
+class 3 0.7 str	Indianapolis   
+class 3 0.7 str	San Francisco    
+class 3 0.7 str	Columbus       
+class 3 0.7 str	Austin   
+class 3 0.7 str	Baltimore       
+class 3 0.7 str	Boston        
+class 3 0.7
+str Washington 5
+str Washm$gton 4   
+class 3 0.7 str	Paso        
+class 3 0.7 str	Seattle       
+class 3 0.7 str	Denver       
+class 3 0.7 str	Charlotte   
+class 3 0.7 str	Fort Worth     
+class 3 0.7 str	Portland      
+class 3 0.7 str	New Orleans   
+class 3 0.7 str	Las Vegas        
+class 3 0.7 str	Cleveland       
+class 3 0.7 str	Oakland   
+class 3 0.7 str	Albuquerque         
+class 3 0.7 str	Argentina       
+class 3 0.7 str	Sacramento       
+class 3 0.7 str	Omaha   
+class 3 0.7 str	Minneapolis      
+class 3 0.7 str	Honolulu        
+class 3 0.7 str	Wichita   
+class 3 0.7 str	Colorado Springs 
+class 3 0.7 str	St. Louis   
+class 3 0.7 str	Pittsburgh   
+class 3 0.7 str	Santa Ana       
+class 3 0.7 str	Arlington      
+class 3 0.7 str	Cincinnati   
+class 3 0.7 str	Dover         
+class 3 0.7 str	Cambridge   
+class 3 0.7 str	Southampton        
+class 3 0.7 str	Liverpool    
+class 3 0.7 str	Lyon       
+class 3 0.7 str	Marseille       
+class 3 0.7 str	Nice   
+class 3 0.7 str	Toulouse        
+class 3 0.7 str	Cannes        
+class 3 0.7 str	Bordeaux    
+class 3 0.7 str	Munich        
+class 3 0.7 str	Hamburg   
+class 3 0.7 str	Hanover       
+class 3 0.7 str	Frankfurt    
+class 3 0.7 str	Switzerland
+class 3 0.7 str	Bern       
+class 3 0.7 str	Zurich        
+class 3 0.7 str	Geneva   
+class 3 0.7 str	Belgium
+class 3 0.7 str	Brussels      
+class 3 0.7 str	Aalst       
+class 3 0.7 str	Hasselt   
+class 3 0.7 str	Bulgaria
+class 3 0.7 str	Sofia    
+class 3 0.7 str	Poland
+class 3 0.7 str	Warsaw    
+class 3 0.7 str	Czech
+class 3 0.7 str	Prague       
+class 3 0.7 str	Bratislava  
+class 3 0.7 str	Sweden
+class 3 0.7 str	Stockholm  
+class 3 0.7 str	Lund        
+class 3 0.7 str	Gothenburg    
+class 3 0.7 str	Norway
+class 3 0.7 str	Oslo        
+class 3 0.7 str	Bergen   
+class 3 0.7 str	Finland
+class 3 0.7 str	Helsinki    
+class 3 0.7 str	Denmark
+class 3 0.7 str	Copenhagen
+class 3 0.7 str	Aalborg  
+class 3 0.7 str	Netherlands
+class 3 0.7 str	Amsterdam
+class 3 0.7 str	Rotterdam    
+class 3 0.7 str	Rome
+class 3 0.7 str	Milan
+class 3 0.7 str	Tokyo
+class 3 0.7 str	Nagoya
+class 3 0.7 str	Kawasaki
+class 3 0.7 str	Sapporo
+class 3 0.7 str	Sendai
+class 3 0.7 str	Saitama
+class 3 0.7 str	Chiba
+class 3 0.7 str	Yokohama
+class 3 0.7 str	Shizuoka
+class 3 0.7 str	Hamamatsu
+class 3 0.7 str	Kyoto
+class 3 0.7 str	Osaka
+class 3 0.7 str	Sakai
+class 3 0.7 str	Kobe
+class 3 0.7 str	Hiroshima
+class 3 0.7 str	Kitakyushu
+class 3 0.7 str	Fukuoka
+class 3 0.7 str	Urumchi 
+class 3 0.7 str	Lahsa 
+class 3 0.7 str	Xilinhot 
+class 3 0.7 str	Tibet 
+class 3 0.7 str	Sian 
+class 3 0.7 str	Zhuhai
+class 3 0.7 str	Chengdu
+class 3 0.7 str	Fuzhou
+class 3 0.7 str	Ningbo
+class 3 0.7 str	Tsingtao
+class 3 0.7 str	Xiamen
+class 3 0.7 str	canton
+class 3 0.7 str	Guangzhou
+class 3 0.7 str Hangzhou
+class 3 0.7 str	Lhasa 
+class 3 0.7 str	Harbin 
+class 3 0.7 str	Hong Kong 
+class 3 0.7 str	Shanghai
+class 3 0.7 str	Hohhot 
+class 3 0.7 str	Urumqi 
+class 3 0.7 str	Karamry 
+class 3 0.7 str	Macao 
+class 3 0.7 str	Nanking 
+class 3 0.7 str	Beijing
+class 3 0.7 str	Qingdao
+class 3 0.7 str Japan
+

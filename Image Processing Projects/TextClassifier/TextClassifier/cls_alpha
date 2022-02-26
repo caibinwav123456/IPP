@@ -1,0 +1,1531 @@
+attrib Career Company Mail Address Url Title
+corr_th 0.8
+thresh 5 0.7
+
+class 0 0.7
+str engineer 5
+str Engineer 5
+str engm$eer 4
+class 0 0.6
+str office 5
+str OFFICE 5
+class 0 0.6
+str sales 5
+str Sales 5
+str sa1es 4
+class 0 0.7
+str manager 5
+str Manager 5
+class 0 0.7
+str project 5
+str Project 5
+class 0 0.7
+str execute 5
+str Execute 5
+class 0 0.7
+str Service 5
+str Servlce 4
+str ServIce 4
+class 0 0.5
+str Law 5
+str LAW 5
+class 0 0.5 0.9
+str Dept 5
+str DEPT 5
+str dept 3
+
+class 1 0.5
+str Ltd 5
+str LTD 5
+class 1 0.7
+str Limited 5
+str LIMITED 5
+class 1 0.5
+str Co. 5
+str CO. 5
+class 1 0.5
+str Inc 5
+str INC 5
+str 1nc 3
+str lnc 3
+class 1 0.5
+str .llc 5
+str .LLC 5
+class 1 0.5
+str .corp 5
+str .CORP 5
+class 1 0.7
+str FACTORY 5
+str factory 5
+class 1 0.7
+str M$ARKET 5
+str m$arket 5
+str rnarket 4
+
+class 2 0.5 str @
+bias 0.2
+class 2 0.6
+corr_text # 
+str mail 5
+str MAIL 5
+str mai1 4
+str maiI 4
+str maii 4
+class 2 0.6 0.9
+corr_text #
+str mail: 5
+str MAIL: 5
+str mail; 4
+str mai1: 4
+str maiI: 4
+str maii: 4
+class 2 0.6 0.9
+corr_text #
+str EMAIL: 5
+str email: 5
+str Email; 4
+str Emai1: 4
+str EmaiI: 4
+str Emaii: 4
+class 2 0.6 0.9
+corr_text #
+str EMAIL 5
+str email 5
+str Emai1 4
+str EmaiI 4
+str Emaii 4
+
+class 3 0.7
+str Building 5
+str BUILDING 5
+str Bui1ding 4
+class 3 0.5
+str Rd. 5
+str RD. 5
+class 3 0.5
+str Road 5
+str ROAD 5
+class 3 0.5
+str Str. 5
+class 3 0.6
+str Park 5
+str PARK 5
+str Pork 3
+class 3 0.6
+str Venture 5
+str venture 5
+str VENTURE 5
+class 3 0.6
+str District 5
+str DISTRICT 5
+str Distn$ct 3
+str Dism$$ct 3
+str m$strict 2
+str M$strict 2
+class 3 0.5
+str City 5
+str city 5
+class 3 0.6
+str State 5
+str state 5
+class 3 0.7
+str Province 5
+str province 5
+class 3 0.6
+str Island 5
+str island 5
+str 1s1and 4
+class 3 0.7
+str Floor 5
+str floor 5
+class 3 0.5
+str room 5
+str ROOM 5
+class 3 0.6
+str street 5
+str STREET 5
+class 3 0.7
+str Prairie 5
+str prairie 5
+class 3 0.6
+str East 5
+str EAST 5
+class 3 0.6
+str West 5
+str WEST 5
+class 3 0.6
+str North 5
+str NORTH 5
+class 3 0.6
+str South 5
+str SOUTH 5
+class 3 0.6
+str Ocean 5
+str OCEAN 5
+class 3 0.5
+str zone 5
+str ZONE 5
+class 3 0.5
+str AVE 5
+str Ave 5
+class 3 0.6 str Block
+class 3 0.6 str Shenzhen
+class 3 0.6 str China
+class 3 0.6 str Taiwan
+class 3 0.6 str Taipei
+class 3 0.5 str PRC
+class 3 0.5 str USA
+class 3 0.5 str US.
+class 3 0.5 str UK.
+
+ignore_case + c
+whole_word + 5
+#State names of the U.S.
+class 3 0.6 str Alabama        
+class 3 0.6 str Alaska         
+class 3 0.6 str Arizona        
+class 3 0.6 str Arkansas       
+class 3 0.6 str California      
+class 3 0.6 str Colorado        
+class 3 0.6 str Connecticut     
+class 3 0.6 str Delaware        
+class 3 0.6 str Florida         
+class 3 0.6 str Georgia         
+class 3 0.6 str Hawaii          
+class 3 0.6 str Idaho           
+class 3 0.6 str Illinois        
+class 3 0.6 str Indiana         
+class 3 0.6 str Iowa            
+class 3 0.6 str Kansas          
+class 3 0.6 str Kentucky        
+class 3 0.6 str Louisiana       
+class 3 0.6 str Maine           
+class 3 0.6 str Maryland        
+class 3 0.6 str Massachusetts   
+class 3 0.6 str Michigan        
+class 3 0.6 str Minnesota       
+class 3 0.6 str Mississippi     
+class 3 0.6 str Missouri        
+class 3 0.6 str Montana         
+class 3 0.6 str Nebraska        
+class 3 0.6 str Nevada          
+class 3 0.6 str New hampshire   
+class 3 0.6 str New jersey      
+class 3 0.6 str New mexico      
+class 3 0.6 str New york        
+class 3 0.6 str North carolina  
+class 3 0.6 str North dakota    
+class 3 0.6 str Ohio            
+class 3 0.6 str Oklahoma        
+class 3 0.6 str Oregon          
+class 3 0.6 str Pennsylvania    
+class 3 0.6 str Rhode island    
+class 3 0.6 str South carolina  
+class 3 0.6 str South dakota    
+class 3 0.6 str Tennessee       
+class 3 0.6 str Texas           
+class 3 0.6 str Utah            
+class 3 0.6 str Vermont         
+class 3 0.6 str Virginia        
+class 3 0.6 str Washington      
+class 3 0.6 str West virginia   
+class 3 0.6 str Wisconsin       
+class 3 0.6 str Wyoming    
+
+#European places
+class 3 0.6 str London
+class 3 0.6 str Paris
+class 3 0.6 str Berlin
+class 3 0.6 str France
+class 3 0.6 str German
+class 3 0.6 str England
+class 3 0.6 str Scotland
+class 3 0.6 str Wales
+class 3 0.6 str Italy
+class 3 0.6 str Greece
+class 3 0.6 str Holland
+class 3 0.6 str Dutch
+ignore_case -
+whole_word -
+
+class 4 0.6
+str Http 5
+str HTTP 5
+class 4 0.6
+str www 5
+str WWW 5
+class 4 0.5
+str .cn 5
+str .CN 5
+class 4 0.5 str .uk
+class 4 0.5 str .net
+class 4 0.5 str .us
+class 4 0.5 str .gov
+class 4 0.5 str .org
+class 4 0.5 str .edu
+class 4 0.5
+str .com$ 5
+str .COM$ 5
+str .c0m$ 4
+str .coin 4
+str .corn 4
+
+#Compound Career
+class 0 0.7 str Assistant 
+class 0 0.7 str Clerk
+class 0 0.7 str Chairman
+class 0 0.7 str Supervisor
+class 0 0.7 str Representative
+class 0 0.7 str Staff
+class 0 0.7 str Analyst
+class 0 0.7 str Trader
+class 0 0.7 str Controller
+class 0 0.7 str Buyer
+class 0 0.7 str Cashier
+class 0 0.7 str Receptionist
+class 0 0.7 str Typist 
+class 0 0.7 str Secretary
+class 0 0.7 str Operator 
+class 0 0.7 str Copywriter
+class 0 0.7 str Technician
+class 0 0.7 str Instructor
+class 0 0.7 str Teacher
+class 0 0.7 str Reporter
+class 0 0.7 str Auditor
+class 0 0.7 str President
+class 0 0.7 str Actuary      
+class 0 0.7 str Interpreter
+class 0 0.7 str Adviser
+class 0 0.7 str Consult
+class 0 0.7 str Worker
+class 0 0.7 str Architect
+class 0 0.7 str Designer
+class 0 0.7 str Programmer
+class 0 0.7 str Salesperson
+class 0 0.7 str Registrar
+class 0 0.7 str Editor
+class 0 0.7 str Translator
+class 0 0.7 str Tourist Guide
+class 0 0.7 str Checker
+class 0 0.7 str Part Time 
+class 0 0.7 str Specialist 
+class 0 0.7 str Security 
+class 0 0.7 str Driver 
+class 0 0.7 str Chauffeur
+class 0 0.7 str Chief
+class 0 0.7 str Coach
+class 0 0.7 str Cook 
+class 0 0.7 str Trainer
+class 0 0.7 str Trainee
+class 0 0.7 str Intern
+class 0 0.7 str	Official
+class 0 0.7 str	Psychologist
+class 0 0.7 str	Coodinator
+class 0 0.7 str	Researcher
+class 0 0.7 str	Nurse
+class 0 0.7 str	Doctor 
+class 0 0.7 str	Tutor
+class 0 0.7 str	Lecturer
+class 0 0.7 str	Administrator 
+class 0 0.7 str	Lawyer
+class 0 0.7 str	Courier 
+class 0 0.7 str	Director
+class 0 0.7 str	Electrician
+whole_word + 5
+class 0 0.5 str	COO
+class 0 0.5 str	CFO
+class 0 0.5 str	CTO
+class 0 0.5 str	CIO
+class 0 0.5 str CEO
+whole_word -
+
+#Compound Url
+class 4 0.5 str	.int
+class 4 0.5 str	.mil
+class 4 0.5 str	.ac
+class 4 0.5 str	.arpa
+class 4 0.5 str	.biz
+class 4 0.5 str	.info
+class 4 0.5 str	.pro
+class 4 0.5 str	.aero
+class 4 0.5 str	.museum
+class 4 0.5 str	.asia
+class 4 0.5 str	.cc
+class 4 0.5 str	.tv
+class 4 0.5 str	.travel
+class 4 0.5 str	.idv
+
+ignore_case +
+#Compound address
+class 3 0.7 str Los Angeles
+class 3 0.7 str	Chicago
+class 3 0.7 str	Houston
+class 3 0.7 str	Philadelphia 
+class 3 0.7 str	Phoneix 
+class 3 0.7 str	San Diego    
+class 3 0.7 str	Dallas        
+class 3 0.7 str	San Antonio   
+class 3 0.7 str	Detroit        
+class 3 0.7
+str San Jose 5
+str San José 5      
+class 3 0.7 str	Indianapolis   
+class 3 0.7 str	San Francisco    
+class 3 0.7 str	Columbus       
+class 3 0.7 str	Austin   
+class 3 0.7 str	Baltimore       
+class 3 0.7 str	Boston        
+class 3 0.7
+str Washington 5
+str Washm$gton 4   
+class 3 0.7 str	Paso        
+class 3 0.7 str	Seattle       
+class 3 0.7 str	Denver       
+class 3 0.7 str	Charlotte   
+class 3 0.7 str	Fort Worth     
+class 3 0.7 str	Portland      
+class 3 0.7 str	New Orleans   
+class 3 0.7 str	Las Vegas        
+class 3 0.7 str	Cleveland       
+class 3 0.7 str	Oakland   
+class 3 0.7 str	Albuquerque         
+class 3 0.7 str	Argentina       
+class 3 0.7 str	Sacramento       
+class 3 0.7 str	Omaha   
+class 3 0.7 str	Minneapolis      
+class 3 0.7 str	Honolulu        
+class 3 0.7 str	Wichita   
+class 3 0.7 str	Colorado Springs 
+class 3 0.7 str	St. Louis   
+class 3 0.7 str	Pittsburgh   
+class 3 0.7 str	Santa Ana       
+class 3 0.7 str	Arlington      
+class 3 0.7 str	Cincinnati   
+class 3 0.7 str	Dover         
+class 3 0.7 str	Cambridge   
+class 3 0.7 str	Southampton        
+class 3 0.7 str	Liverpool    
+class 3 0.7 str	Lyon       
+class 3 0.7 str	Marseille       
+class 3 0.7 str	Nice   
+class 3 0.7 str	Toulouse        
+class 3 0.7 str	Cannes        
+class 3 0.7 str	Bordeaux    
+class 3 0.7 str	Munich        
+class 3 0.7 str	Hamburg   
+class 3 0.7 str	Hanover       
+class 3 0.7 str	Frankfurt    
+class 3 0.7 str	Switzerland
+class 3 0.7 str	Bern       
+class 3 0.7 str	Zurich        
+class 3 0.7 str	Geneva   
+class 3 0.7 str	Belgium
+class 3 0.7 str	Brussels      
+class 3 0.7 str	Aalst       
+class 3 0.7 str	Hasselt   
+class 3 0.7 str	Bulgaria
+class 3 0.7 str	Sofia    
+class 3 0.7 str	Poland
+class 3 0.7 str	Warsaw    
+class 3 0.7 str	Czech
+class 3 0.7 str	Prague       
+class 3 0.7 str	Bratislava  
+class 3 0.7 str	Sweden
+class 3 0.7 str	Stockholm  
+class 3 0.7 str	Lund        
+class 3 0.7 str	Gothenburg    
+class 3 0.7 str	Norway
+class 3 0.7 str	Oslo        
+class 3 0.7 str	Bergen   
+class 3 0.7 str	Finland
+class 3 0.7 str	Helsinki    
+class 3 0.7 str	Denmark
+class 3 0.7 str	Copenhagen
+class 3 0.7 str	Aalborg  
+class 3 0.7 str	Netherlands
+class 3 0.7 str	Amsterdam
+class 3 0.7 str	Rotterdam    
+class 3 0.7 str	Rome
+class 3 0.7 str	Milan
+class 3 0.7 str	Tokyo
+class 3 0.7 str	Nagoya
+class 3 0.7 str	Kawasaki
+class 3 0.7 str	Sapporo
+class 3 0.7 str	Sendai
+class 3 0.7 str	Saitama
+class 3 0.7 str	Chiba
+class 3 0.7 str	Yokohama
+class 3 0.7 str	Shizuoka
+class 3 0.7 str	Hamamatsu
+class 3 0.7 str	Kyoto
+class 3 0.7 str	Osaka
+class 3 0.7 str	Sakai
+class 3 0.7 str	Kobe
+class 3 0.7 str	Hiroshima
+class 3 0.7 str	Kitakyushu
+class 3 0.7 str	Fukuoka
+class 3 0.7 str	Urumchi 
+class 3 0.7 str	Lahsa 
+class 3 0.7 str	Xilinhot 
+class 3 0.7 str	Tibet 
+class 3 0.7 str	Sian 
+class 3 0.7 str	Zhuhai
+class 3 0.7 str	Chengdu
+class 3 0.7 str	Fuzhou
+class 3 0.7 str	Ningbo
+class 3 0.7 str	Tsingtao
+class 3 0.7 str	Xiamen
+class 3 0.7 str	canton
+class 3 0.7 str	Guangzhou
+class 3 0.7 str Hangzhou
+class 3 0.7 str	Lhasa 
+class 3 0.7 str	Harbin 
+class 3 0.7 str	Hong Kong 
+class 3 0.7 str	Shanghai
+class 3 0.7 str	Hohhot 
+class 3 0.7 str	Urumqi 
+class 3 0.7 str	Karamry 
+class 3 0.7 str	Macao 
+class 3 0.7 str	Nanking 
+class 3 0.7 str	Beijing
+class 3 0.7 str	Qingdao
+class 3 0.7 str Japan
+
+ignore_case + c
+whole_word + 5
+corr_th 0.85
+#Compound Title
+class 5 0.7 str Ashen
+class 5 0.7 str Catherine
+class 5 0.7 str Charles
+class 5 0.7 str Diana
+class 5 0.7 str Elizabeth
+class 5 0.7 str Edward  
+class 5 0.7 str Edwin
+class 5 0.7 str Bush
+class 5 0.7 str King
+class 5 0.7 str Pope
+class 5 0.7 str Stuart
+class 5 0.7 str Prior
+class 5 0.7 str Henry
+class 5 0.7 str Georget
+class 5 0.7 str Farmer
+class 5 0.7 str Carter
+class 5 0.7 str Smith
+class 5 0.7 str Trnuer
+class 5 0.7 str Cook
+class 5 0.7 str Baker
+class 5 0.7 str Taylor
+class 5 0.7 str Johnson
+class 5 0.7 str Tomson
+class 5 0.7 str Robinson
+class 5 0.7 str Jameson
+class 5 0.7 str Strong
+class 5 0.7 str Little
+class 5 0.7 str Long
+class 5 0.7 str Short
+class 5 0.7 str Jack
+class 5 0.7 str Frank
+class 5 0.7 str Mark
+class 5 0.7 str Charles
+class 5 0.7 str Black
+class 5 0.7 str White
+class 5 0.7 str Brown
+class 5 0.7 str Green
+class 5 0.7 str Fox
+class 5 0.7 str Cock
+class 5 0.7 str Wolf
+class 5 0.7 str Hill
+class 5 0.7 str Waters
+class 5 0.7 str Lake
+class 5 0.7 str Bush
+class 5 0.7 str Wood
+class 5 0.7 str Flower
+class 5 0.7 str Jones
+class 5 0.7 str Miller
+class 5 0.7 str Davis
+class 5 0.7 str Garcia
+class 5 0.7 str Rodriguez
+class 5 0.7 str Wilson
+class 5 0.7 str Williams
+class 5 0.7 str Scott
+class 5 0.7 str Peters
+class 5 0.7 str Walker
+class 5 0.7 str Carter
+class 5 0.7 str Warren
+class 5 0.7 str Tunener
+class 5 0.7 str Shelley
+class 5 0.7 str Rupert
+class 5 0.7 str Rose
+class 5 0.7 str Rodney
+class 5 0.7 str Raphael
+class 5 0.7 str Quick
+class 5 0.7 str Percy
+class 5 0.7 str Owen
+class 5 0.7 str Oliver
+class 5 0.7 str Nelson
+class 5 0.7 str Murphy
+class 5 0.7 str May
+class 5 0.7 str Lewis
+class 5 0.7 str Lester
+class 5 0.7 str Leslie
+class 5 0.7 str Leonard
+class 5 0.7 str Lee
+class 5 0.7 str Kirk
+class 5 0.7 str Keith
+class 5 0.7 str Joyce
+class 5 0.7 str James
+class 5 0.7 str Jackson
+class 5 0.7 str Hill
+class 5 0.7 str Harris
+class 5 0.7 str Hall
+class 5 0.7 str Griffin
+class 5 0.7 str Giles
+class 5 0.7 str Gerard
+class 5 0.7 str George
+class 5 0.7 str Gary
+class 5 0.7 str Garcia
+class 5 0.7 str Fergus
+class 5 0.7 str Evelyn
+class 5 0.7 str Eddy
+class 5 0.7 str Duncan
+class 5 0.7 str Clive
+class 5 0.7 str Clark
+class 5 0.7 str David
+class 5 0.7 str Dale
+class 5 0.7 str Christian
+class 5 0.7 str Charles
+class 5 0.7 str Cecil
+class 5 0.7 str Campbell
+class 5 0.7 str Bell
+class 5 0.7 str Baker
+class 5 0.7 str Arnold
+class 5 0.7 str Anderson
+class 5 0.7 str Adams
+class 5 0.7 str Vort
+class 5 0.7 str Zorajan
+class 5 0.7 str Zijat
+class 5 0.7 str Zerkos
+class 5 0.7 str Vishon
+class 5 0.7 str Vinberuj
+class 5 0.7 str Vilanan
+class 5 0.7 str Verum
+class 5 0.7 str Verdajh
+class 5 0.7 str Vendej
+class 5 0.7 str Makavel
+class 5 0.7 str Libret
+class 5 0.7 str Montril
+class 5 0.7 str Paner
+class 5 0.7 str Howard
+class 5 0.7 str Brisly
+class 5 0.7 str Whitton
+class 5 0.7 str Orlov
+class 5 0.7 str Blade
+class 5 0.7 str Nelson
+class 5 0.7 str McNeil
+class 5 0.7 str Hanson
+class 5 0.7 str Fransco
+class 5 0.7 str Finster
+class 5 0.7 str Perry
+class 5 0.7 str Hopkins
+class 5 0.7 str Roberts
+class 5 0.7 str Garcia
+class 5 0.7 str Rodriguez
+class 5 0.7 str Wilson
+class 5 0.7 str Martines
+class 5 0.7 str Thomas
+class 5 0.7 str Moore
+class 5 0.7 str Martin
+class 5 0.7 str Thompson
+class 5 0.7 str Stock
+class 5 0.7 str Reed
+class 5 0.7 str Bull
+class 5 0.7 str Bush
+class 5 0.7 str Finger
+class 5 0.7 str Longman
+class 5 0.7 str Sharp
+class 5 0.7 str Sterling
+class 5 0.7 str Hard
+class 5 0.7 str Well
+class 5 0.7 str George
+class 5 0.7 str Henry
+class 5 0.7 str Clinton
+class 5 0.7 str Macadam
+class 5 0.7 str Kent
+class 5 0.7 str Abbot
+class 5 0.7 str Abe 
+class 5 0.7 str Abraham 
+class 5 0.7 str Acheson
+class 5 0.7 str Ackerman
+class 5 0.7 str Adam
+class 5 0.7 str Adams
+class 5 0.7 str Addison 
+class 5 0.7 str Adela 
+class 5 0.7 str Adelaide 
+class 5 0.7 str Adolph 
+class 5 0.7 str Agnes 
+class 5 0.7 str Albert 
+class 5 0.7 str Alcott 
+class 5 0.7 str Aldington 
+class 5 0.7 str Aldridge 
+class 5 0.7 str Alexander
+class 5 0.7 str Alerander
+class 5 0.7 str Alfred 
+class 5 0.7 str Alice 
+class 5 0.7 str Alick 
+class 5 0.7 str Allen
+class 5 0.7 str Alsop
+class 5 0.7 str Aly 
+class 5 0.7 str Amelia 
+class 5 0.7 str Anderson 
+class 5 0.7 str Andrew 
+class 5 0.7 str Ann 
+class 5 0.7 str Anna 
+class 5 0.7 str Anne
+class 5 0.7 str Anthony 
+class 5 0.7 str Antoinette 
+class 5 0.7 str Antonia 
+class 5 0.7 str Arabella 
+class 5 0.7 str Archibald 
+class 5 0.7 str Armstrong 
+class 5 0.7 str Arnold 
+class 5 0.7 str Arthur 
+class 5 0.7 str Attlee 
+class 5 0.7 str Augustine 
+class 5 0.7 str Augustus 
+class 5 0.7 str Austen 
+class 5 0.7 str Austin 
+class 5 0.7 str Babbitt 
+class 5 0.7 str Bach 
+class 5 0.7 str Bacon 
+class 5 0.7 str Baldwin 
+class 5 0.7 str Barnard 
+class 5 0.7 str Barney 
+class 5 0.7 str Barnard
+class 5 0.7 str Barrett 
+class 5 0.7 str Barrie
+class 5 0.7 str Bart 
+class 5 0.7 str Bartholomew
+class 5 0.7 str Bartlett 
+class 5 0.7 str Barton 
+class 5 0.7 str Bauer
+class 5 0.7 str Beard 
+class 5 0.7 str Beaufort 
+class 5 0.7 str Becher
+class 5 0.7 str Beck 
+class 5 0.7 str Rebecca
+class 5 0.7 str Becky
+class 5 0.7 str Beerbohm 
+class 5 0.7 str Bell 
+class 5 0.7 str Bellamy 
+class 5 0.7 str Belle 
+class 5 0.7 str Arabella
+class 5 0.7 str Belloc
+class 5 0.7 str Ben 
+class 5 0.7 str Benjamin
+class 5 0.7 str Benedict 
+class 5 0.7 str Benjamin 
+class 5 0.7 str Bennett 
+class 5 0.7 str Benson 
+class 5 0.7 str Bentham 
+class 5 0.7 str Berkeley 
+class 5 0.7 str Bernal 
+class 5 0.7 str Bernard 
+class 5 0.7 str Bert 
+class 5 0.7 str Albert
+class 5 0.7 str Herbert
+class 5 0.7 str Bertha 
+class 5 0.7 str Bertie 
+class 5 0.7 str Bertram 
+class 5 0.7 str Bess 
+class 5 0.7 str Elizabeth
+class 5 0.7 str Bessemer
+class 5 0.7 str Bessie 
+class 5 0.7 str Elizabeth
+class 5 0.7 str Bethune 
+class 5 0.7 str Betsy 
+class 5 0.7 str Elizabeth
+class 5 0.7 str Betty 
+class 5 0.7 str Bill 
+class 5 0.7 str William
+class 5 0.7 str Billy 
+class 5 0.7 str Birrell 
+class 5 0.7 str Black 
+class 5 0.7 str Blake 
+class 5 0.7 str Bloomer 
+class 5 0.7 str Bloomfield 
+class 5 0.7 str Bloor 
+class 5 0.7 str Blume 
+class 5 0.7 str Bob 
+class 5 0.7 str Robert
+class 5 0.7 str Bobby 
+class 5 0.7 str Boswell 
+class 5 0.7 str Bowen 
+class 5 0.7 str Bowman 
+class 5 0.7 str Boyle 
+class 5 0.7 str Bradley 
+class 5 0.7 str Bray 
+class 5 0.7 str Brewster 
+class 5 0.7 str Bridges 
+class 5 0.7 str Bright 
+class 5 0.7 str Broad 
+class 5 0.7 str Bronte 
+class 5 0.7 str Brooke 
+class 5 0.7 str Brown 
+class 5 0.7 str Browne 
+class 5 0.7 str Browning 
+class 5 0.7 str Bruce 
+class 5 0.7 str Bruno 
+class 5 0.7 str Bryan 
+class 5 0.7 str Bryce 
+class 5 0.7 str Buck 
+class 5 0.7 str Buckle 
+class 5 0.7 str Bulwer 
+class 5 0.7 str Bunyan 
+class 5 0.7 str Burke 
+class 5 0.7 str Burne
+class 5 0.7 str Burns 
+class 5 0.7 str Butler 
+class 5 0.7 str Byron 
+class 5 0.7 str Camilla 
+class 5 0.7 str Camp 
+class 5 0.7 str Carey 
+class 5 0.7 str Carl 
+class 5 0.7 str Carllyle 
+class 5 0.7 str Carmen 
+class 5 0.7 str Carnegie 
+class 5 0.7 str Caroline 
+class 5 0.7 str Carpenter 
+class 5 0.7 str Carrie 
+class 5 0.7 str Carroll 
+class 5 0.7 str Carter 
+class 5 0.7 str Catharine
+class 5 0.7 str Catherine
+class 5 0.7 str Cecillia 
+class 5 0.7 str Chamberlain 
+class 5 0.7 str Chaplin 
+class 5 0.7 str Chapman 
+class 5 0.7 str Charles 
+class 5 0.7 str Charley 
+class 5 0.7 str Charles
+class 5 0.7 str Charlotte 
+class 5 0.7 str Charles 
+class 5 0.7 str Chaucer 
+class 5 0.7 str Chesterton 
+class 5 0.7 str Child 
+class 5 0.7 str Childe
+class 5 0.7 str Christ 
+class 5 0.7 str Christian 
+class 5 0.7 str Christiana 
+class 5 0.7 str Christie
+class 5 0.7 str Christian
+class 5 0.7 str Christopher
+class 5 0.7 str Christy 
+class 5 0.7 str Church 
+class 5 0.7 str Churchill 
+class 5 0.7 str Cissie 
+class 5 0.7 str Cecillia
+class 5 0.7 str Clapham 
+class 5 0.7 str Clara 
+class 5 0.7 str Clare 
+class 5 0.7 str Clarissa
+class 5 0.7 str Clarke
+class 5 0.7 str Clemens 
+class 5 0.7 str Clement 
+class 5 0.7 str Cocker 
+class 5 0.7 str Coffey 
+class 5 0.7 str Colclough 
+class 5 0.7 str Coleridge 
+class 5 0.7 str Collins 
+class 5 0.7 str Commons
+class 5 0.7 str Conan 
+class 5 0.7 str Congreve
+class 5 0.7 str Connie 
+class 5 0.7 str Constance
+class 5 0.7 str Connor
+class 5 0.7 str Conrad 
+class 5 0.7 str Cooper 
+class 5 0.7 str Copperfield
+class 5 0.7 str Cotton 
+class 5 0.7 str Coverdale 
+class 5 0.7 str Cowper 
+class 5 0.7 str Craigie 
+class 5 0.7 str Crane 
+class 5 0.7 str Crichton 
+class 5 0.7 str Croft 
+class 5 0.7 str Crofts 
+class 5 0.7 str Cromwell 
+class 5 0.7 str Cronin 
+class 5 0.7 str Cumberland 
+class 5 0.7 str Curme 
+class 5 0.7 str Daisy 
+class 5 0.7 str Dalton 
+class 5 0.7 str Dan 
+class 5 0.7 str Daniel 
+class 5 0.7 str Daniell 
+class 5 0.7 str Darwin 
+class 5 0.7 str David
+class 5 0.7 str Davy 
+class 5 0.7 str Defoe 
+class 5 0.7 str Delia
+class 5 0.7 str Dennis 
+class 5 0.7 str DeQuincey
+class 5 0.7 str Dewar 
+class 5 0.7 str Dewey 
+class 5 0.7 str Dick 
+class 5 0.7 str Richard
+class 5 0.7 str Dickens 
+class 5 0.7 str Dickey 
+class 5 0.7 str Dillon 
+class 5 0.7 str Dobbin 
+class 5 0.7 str Dodd 
+class 5 0.7 str Doherty 
+class 5 0.7 str Dolly 
+class 5 0.7 str Dorthea
+class 5 0.7 str Dorothy
+class 5 0.7 str Donne 
+class 5 0.7 str Dora 
+class 5 0.7 str Doris 
+class 5 0.7 str Dorothea
+class 5 0.7 str Dorothy
+class 5 0.7 str Douglas
+class 5 0.7 str Doyle 
+class 5 0.7 str Dierser 
+class 5 0.7 str Dryden 
+class 5 0.7 str DuBois 
+class 5 0.7 str Dulles 
+class 5 0.7 str Dunbar 
+class 5 0.7 str Duncan 
+class 5 0.7 str Dunlop 
+class 5 0.7 str Dupont 
+class 5 0.7 str Dutt 
+class 5 0.7 str Eddie 
+class 5 0.7 str Edward
+class 5 0.7 str Eden 
+class 5 0.7 str Edgeworth
+class 5 0.7 str Edie 
+class 5 0.7 str Adam
+class 5 0.7 str Edison
+class 5 0.7 str Edith 
+class 5 0.7 str Edmund 
+class 5 0.7 str Edward 
+class 5 0.7 str Effie 
+class 5 0.7 str Euphemia
+class 5 0.7 str Eipstein
+class 5 0.7 str Eisenhower 
+class 5 0.7 str Eleanor 
+class 5 0.7 str Electra 
+class 5 0.7 str Elinor 
+class 5 0.7 str Eliot 
+class 5 0.7 str Elizabeth
+class 5 0.7 str Ella 
+class 5 0.7 str Ellen 
+class 5 0.7 str Ellis 
+class 5 0.7 str Elsie 
+class 5 0.7 str Emerson 
+class 5 0.7 str Emily
+class 5 0.7 str Emma 
+class 5 0.7 str Emmie
+class 5 0.7 str Emmy
+class 5 0.7 str Ernest
+class 5 0.7 str Esther 
+class 5 0.7 str Eugen 
+class 5 0.7 str Eugene 
+class 5 0.7 str Euphemia 
+class 5 0.7 str Eva 
+class 5 0.7 str Evan 
+class 5 0.7 str Evans
+class 5 0.7 str Eve
+class 5 0.7 str Evelina 
+class 5 0.7 str Eveline
+class 5 0.7 str Evelyn
+class 5 0.7 str Ezekiel 
+class 5 0.7 str Fanny 
+class 5 0.7 str Frances
+class 5 0.7 str Faraday 
+class 5 0.7 str Fast 
+class 5 0.7 str Faulkner 
+class 5 0.7 str Felix 
+class 5 0.7 str Felton 
+class 5 0.7 str Ferdinand
+class 5 0.7 str Ferguson 
+class 5 0.7 str Fernando
+class 5 0.7 str Field 
+class 5 0.7 str Fielding
+class 5 0.7 str Finn 
+class 5 0.7 str FitzGerald
+class 5 0.7 str Flower 
+class 5 0.7 str Flynn
+class 5 0.7 str Ford 
+class 5 0.7 str Forster 
+class 5 0.7 str Foster
+class 5 0.7 str Fowler 
+class 5 0.7 str Fox
+class 5 0.7 str Frances 
+class 5 0.7 str Francis
+class 5 0.7 str Frank 
+class 5 0.7 str Franklin 
+class 5 0.7 str Fred 
+class 5 0.7 str Frederick 
+class 5 0.7 str Freeman 
+class 5 0.7 str Funk 
+class 5 0.7 str Gabriel 
+class 5 0.7 str Galbraith 
+class 5 0.7 str Gallacher 
+class 5 0.7 str Gallup 
+class 5 0.7 str Galsworthy 
+class 5 0.7 str Garcia 
+class 5 0.7 str Garden 
+class 5 0.7 str Gardner
+class 5 0.7 str Gaskell 
+class 5 0.7 str Geoffrey 
+class 5 0.7 str Geordie 
+class 5 0.7 str George 
+class 5 0.7 str Gibbon 
+class 5 0.7 str Gibson 
+class 5 0.7 str Gilbert 
+class 5 0.7 str Giles 
+class 5 0.7 str Gill 
+class 5 0.7 str Gissing 
+class 5 0.7 str Gladstone 
+class 5 0.7 str Godwin 
+class 5 0.7 str Gold 
+class 5 0.7 str Goldsmith
+class 5 0.7 str Gosse
+class 5 0.7 str Grace 
+class 5 0.7 str Gracie 
+class 5 0.7 str Graham 
+class 5 0.7 str Grant 
+class 5 0.7 str Grantham 
+class 5 0.7 str Gray
+class 5 0.7 str Green 
+class 5 0.7 str Gregory 
+class 5 0.7 str Gresham 
+class 5 0.7 str Grey
+class 5 0.7 str Grote 
+class 5 0.7 str Gunter 
+class 5 0.7 str Gunther 
+class 5 0.7 str Gus 
+class 5 0.7 str Guy 
+class 5 0.7 str Habakkuk 
+class 5 0.7 str Haggai 
+class 5 0.7 str Hal 
+class 5 0.7 str Halifax 
+class 5 0.7 str Hamilton 
+class 5 0.7 str Hamlet 
+class 5 0.7 str Hansen 
+class 5 0.7 str Hansom 
+class 5 0.7 str Hardy 
+class 5 0.7 str Harold
+class 5 0.7 str Harper 
+class 5 0.7 str Harriman 
+class 5 0.7 str Harrington 
+class 5 0.7 str Harrison 
+class 5 0.7 str Harrod 
+class 5 0.7 str Harry 
+class 5 0.7 str Hart 
+class 5 0.7 str Harte 
+class 5 0.7 str Harvey
+class 5 0.7 str Hawthorne 
+class 5 0.7 str Haydn 
+class 5 0.7 str Haywood 
+class 5 0.7 str Hazlitt 
+class 5 0.7 str Hearst 
+class 5 0.7 str Helin
+class 5 0.7 str Hemingway 
+class 5 0.7 str Henley 
+class 5 0.7 str Henrietta 
+class 5 0.7 str Henry 
+class 5 0.7 str Herbert 
+class 5 0.7 str Herty 
+class 5 0.7 str Henrietta
+class 5 0.7 str Hewlett 
+class 5 0.7 str Hicks 
+class 5 0.7 str Hill 
+class 5 0.7 str Hobbes
+class 5 0.7 str Hobson
+class 5 0.7 str Hodge 
+class 5 0.7 str Hodgson
+class 5 0.7 str Holmes 
+class 5 0.7 str Holt
+class 5 0.7 str Hood 
+class 5 0.7 str Hoover 
+class 5 0.7 str Hope 
+class 5 0.7 str Hopkin 
+class 5 0.7 str Horace 
+class 5 0.7 str Horatio 
+class 5 0.7 str Hornby
+class 5 0.7 str Hosea 
+class 5 0.7 str House
+class 5 0.7 str Housman 
+class 5 0.7 str Houston 
+class 5 0.7 str Howard 
+class 5 0.7 str Howell
+class 5 0.7 str Hoyle
+class 5 0.7 str Hubbard 
+class 5 0.7 str Hudson 
+class 5 0.7 str Huggins 
+class 5 0.7 str Hugh 
+class 5 0.7 str Hughes 
+class 5 0.7 str Hume 
+class 5 0.7 str Humphry 
+class 5 0.7 str Huntington 
+class 5 0.7 str Hutt 
+class 5 0.7 str Huxley 
+class 5 0.7 str Ingersoll 
+class 5 0.7 str Irving 
+class 5 0.7 str Isaac 
+class 5 0.7 str Isabel 
+class 5 0.7 str Isaiah 
+class 5 0.7 str Ivan 
+class 5 0.7 str Jack 
+class 5 0.7 str Jackson 
+class 5 0.7 str Jacob 
+class 5 0.7 str James
+class 5 0.7 str Jane 
+class 5 0.7 str Jasper 
+class 5 0.7 str Jeames
+class 5 0.7 str Jean 
+class 5 0.7 str Jefferson 
+class 5 0.7 str Jenkin
+class 5 0.7 str Jennings 
+class 5 0.7 str Jenny 
+class 5 0.7 str Jeremiah 
+class 5 0.7 str Jeremy 
+class 5 0.7 str Jerome 
+class 5 0.7 str Jerry 
+class 5 0.7 str Jessie 
+class 5 0.7 str Jim 
+class 5 0.7 str Jimmy 
+class 5 0.7 str Joan 
+class 5 0.7 str Job 
+class 5 0.7 str Joe 
+class 5 0.7 str Joel 
+class 5 0.7 str John
+class 5 0.7 str Johnny 
+class 5 0.7 str Johnson 
+class 5 0.7 str Johnston
+class 5 0.7 str Jonah
+class 5 0.7 str Jonathan 
+class 5 0.7 str Jones 
+class 5 0.7 str Jonson 
+class 5 0.7 str Jordan 
+class 5 0.7 str Joseph 
+class 5 0.7 str Josh
+class 5 0.7 str Joshua 
+class 5 0.7 str Joule 
+class 5 0.7 str Joyce 
+class 5 0.7 str Judd 
+class 5 0.7 str Judith 
+class 5 0.7 str Judson 
+class 5 0.7 str Julia 
+class 5 0.7 str Julian 
+class 5 0.7 str Juliana 
+class 5 0.7 str Juliet 
+class 5 0.7 str Julius 
+class 5 0.7 str Katte 
+class 5 0.7 str Katharine 
+class 5 0.7 str Kathleen 
+class 5 0.7 str Katrine
+class 5 0.7 str Keats
+class 5 0.7 str Kelly 
+class 5 0.7 str Kellogg 
+class 5 0.7 str Kelsen 
+class 5 0.7 str Kelvin 
+class 5 0.7 str Kennan 
+class 5 0.7 str Kennedy 
+class 5 0.7 str Keppel 
+class 5 0.7 str Keynes 
+class 5 0.7 str Kingsley 
+class 5 0.7 str Kipling 
+class 5 0.7 str Kit 
+class 5 0.7 str Kitto 
+class 5 0.7 str Kitty 
+class 5 0.7 str Lamb
+class 5 0.7 str Lambert 
+class 5 0.7 str Lancelot 
+class 5 0.7 str Landon 
+class 5 0.7 str Larkin 
+class 5 0.7 str Lattimore 
+class 5 0.7 str Laurie 
+class 5 0.7 str Law 
+class 5 0.7 str Lawrence 
+class 5 0.7 str Lawson
+class 5 0.7 str Leacock 
+class 5 0.7 str Lee 
+class 5 0.7 str Leigh
+class 5 0.7 str Leighton 
+class 5 0.7 str Lena 
+class 5 0.7 str Leonard 
+class 5 0.7 str Leopold 
+class 5 0.7 str Lew 
+class 5 0.7 str Lewis 
+class 5 0.7 str Lily 
+class 5 0.7 str Lincoln 
+class 5 0.7 str Lindberg
+class 5 0.7 str Lindsay
+class 5 0.7 str Lizzie 
+class 5 0.7 str Lloyd 
+class 5 0.7 str Locke 
+class 5 0.7 str London 
+class 5 0.7 str Longfellow 
+class 5 0.7 str Longman 
+class 5 0.7 str Louie 
+class 5 0.7 str Louis 
+class 5 0.7 str Louisa 
+class 5 0.7 str Louise 
+class 5 0.7 str Lowell 
+class 5 0.7 str Lucas 
+class 5 0.7 str Lucia 
+class 5 0.7 str Lucius 
+class 5 0.7 str Lucy 
+class 5 0.7 str Luke 
+class 5 0.7 str Lyly 
+class 5 0.7 str Lynch 
+class 5 0.7 str Lynd 
+class 5 0.7 str Lytton 
+class 5 0.7 str MacAdam 
+class 5 0.7 str MacArthur
+class 5 0.7 str Macaulay 
+class 5 0.7 str MacDonald
+class 5 0.7 str Macdonald
+class 5 0.7 str Mackintosh 
+class 5 0.7 str MacMillan
+class 5 0.7 str Macmillan 
+class 5 0.7 str MacPherson
+class 5 0.7 str Macpherson 
+class 5 0.7 str Madge 
+class 5 0.7 str Maggie 
+class 5 0.7 str Malachi 
+class 5 0.7 str Malan 
+class 5 0.7 str Malory 
+class 5 0.7 str Malthus 
+class 5 0.7 str Maltz 
+class 5 0.7 str Mansfield 
+class 5 0.7 str Marcellus 
+class 5 0.7 str Marcus 
+class 5 0.7 str Margaret 
+class 5 0.7 str Margery 
+class 5 0.7 str Maria 
+class 5 0.7 str Marion 
+class 5 0.7 str Marjory 
+class 5 0.7 str Marlowe 
+class 5 0.7 str Marner 
+class 5 0.7 str Marshall 
+class 5 0.7 str Martha 
+class 5 0.7 str Martin 
+class 5 0.7 str Mary 
+class 5 0.7 str Masefield 
+class 5 0.7 str Mathilda 
+class 5 0.7 str Matthew 
+class 5 0.7 str Maud 
+class 5 0.7 str Maugham 
+class 5 0.7 str Maurice 
+class 5 0.7 str Max 
+class 5 0.7 str Maxwell 
+class 5 0.7 str May
+class 5 0.7 str McCarthy
+class 5 0.7 str McDonald 
+class 5 0.7 str Meg 
+class 5 0.7 str Melville 
+class 5 0.7 str Meredith 
+class 5 0.7 str Micah 
+class 5 0.7 str Michael 
+class 5 0.7 str Michelson 
+class 5 0.7 str Middleton 
+class 5 0.7 str Mike 
+class 5 0.7 str Mill 
+class 5 0.7 str Milne 
+class 5 0.7 str Milton 
+class 5 0.7 str Minnie 
+class 5 0.7 str Moll 
+class 5 0.7 str Monroe 
+class 5 0.7 str Montgomery
+class 5 0.7 str Moore 
+class 5 0.7 str More 
+class 5 0.7 str Morgan 
+class 5 0.7 str Morley 
+class 5 0.7 str Morris 
+class 5 0.7 str Morrison 
+class 5 0.7 str Morse 
+class 5 0.7 str Morton 
+class 5 0.7 str Moses 
+class 5 0.7 str Motley 
+class 5 0.7 str Moulton 
+class 5 0.7 str Murray 
+class 5 0.7 str Nahum 
+class 5 0.7 str Nancy 
+class 5 0.7 str Nathaniei 
+class 5 0.7 str Needham 
+class 5 0.7 str Nehemiah
+class 5 0.7 str Nell 
+class 5 0.7 str Nelly 
+class 5 0.7 str Eleanor
+class 5 0.7 str Helen
+class 5 0.7 str Nelson 
+class 5 0.7 str Newman 
+class 5 0.7 str Newton 
+class 5 0.7 str Nicholas 
+class 5 0.7 str Nichols
+class 5 0.7 str Nick 
+class 5 0.7 str Nixon 
+class 5 0.7 str Noah 
+class 5 0.7 str Noel 
+class 5 0.7 str Nora
+class 5 0.7 str Norris 
+class 5 0.7 str North
+class 5 0.7 str Norton 
+class 5 0.7 str Noyes
+class 5 0.7 str Obadiah 
+class 5 0.7 str O'Casey 
+class 5 0.7 str Occam 
+class 5 0.7 str O'Connor 
+class 5 0.7 str Oliver 
+class 5 0.7 str O'Neil 
+class 5 0.7 str Onions 
+class 5 0.7 str Orlando 
+class 5 0.7 str Oscar 
+class 5 0.7 str Owen 
+class 5 0.7 str Palmer 
+class 5 0.7 str Pansy 
+class 5 0.7 str Parker 
+class 5 0.7 str Partridge 
+class 5 0.7 str Pater 
+class 5 0.7 str Patience 
+class 5 0.7 str Patrick 
+class 5 0.7 str Paul 
+class 5 0.7 str Peacock 
+class 5 0.7 str Pearson 
+class 5 0.7 str Peg 
+class 5 0.7 str Peggy 
+class 5 0.7 str Penn 
+class 5 0.7 str Pepys 
+class 5 0.7 str Perkin 
+class 5 0.7 str Peter 
+class 5 0.7 str Petty 
+class 5 0.7 str Philemon 
+class 5 0.7 str Philip 
+class 5 0.7 str Piers 
+class 5 0.7 str Peter
+class 5 0.7 str Pigou 
+class 5 0.7 str Pitman 
+class 5 0.7 str Poe
+class 5 0.7 str Pollitt
+class 5 0.7 str Polly 
+class 5 0.7 str Pope 
+class 5 0.7 str Pound 
+class 5 0.7 str Powell 
+class 5 0.7 str Price 
+class 5 0.7 str Priestley 
+class 5 0.7 str Pritt 
+class 5 0.7 str Pulitzer 
+class 5 0.7 str Pullan 
+class 5 0.7 str Pullman 
+class 5 0.7 str Quiller 
+class 5 0.7 str Raglan 
+class 5 0.7 str Raleign 
+class 5 0.7 str Ralph 
+class 5 0.7 str Ramakrishnan
+class 5 0.7 str Raman 
+class 5 0.7 str Ramsden 
+class 5 0.7 str Raphael 
+class 5 0.7 str Rayleign 
+class 5 0.7 str Raymond 
+class 5 0.7 str Reade 
+class 5 0.7 str Rebecca 
+class 5 0.7 str Reed 
+class 5 0.7 str Reynolds 
+class 5 0.7 str Rhodes 
+class 5 0.7 str Rhys 
+class 5 0.7 str Ricardo 
+class 5 0.7 str Richard 
+class 5 0.7 str Richards 
+class 5 0.7 str Richardson
+class 5 0.7 str Rob 
+class 5 0.7 str Robbins
+class 5 0.7 str Robert 
+class 5 0.7 str Robeson 
+class 5 0.7 str Robin
+class 5 0.7 str Robinson 
+class 5 0.7 str Rockefeller 
+class 5 0.7 str Roger 
+class 5 0.7 str Roland 
+class 5 0.7 str Romeo 
+class 5 0.7 str Roosevelt
+class 5 0.7 str Rosa 
+class 5 0.7 str Rosalind 
+class 5 0.7 str Rose 
+class 5 0.7 str Rossetti 
+class 5 0.7 str Roy 
+class 5 0.7 str Rudolph
+class 5 0.7 str Rudolf 
+class 5 0.7 str Rusk
+class 5 0.7 str Ruskin 
+class 5 0.7 str Russell 
+class 5 0.7 str Ruth 
+class 5 0.7 str Rutherford 
+class 5 0.7 str Sainsbury 
+class 5 0.7 str Sailsbury 
+class 5 0.7 str Sally 
+class 5 0.7 str Salome 
+class 5 0.7 str Sam
+class 5 0.7 str Samuel
+class 5 0.7 str Samson 
+class 5 0.7 str Samuel
+class 5 0.7 str Sander 
+class 5 0.7 str Sandy 
+class 5 0.7 str Sapir 
+class 5 0.7 str Sarah 
+class 5 0.7 str Saroyan 
+class 5 0.7 str Sassoon 
+class 5 0.7 str Saul 
+class 5 0.7 str Sawyer 
+class 5 0.7 str Saxton 
+class 5 0.7 str Scott 
+class 5 0.7 str Scripps 
+class 5 0.7 str Senior 
+class 5 0.7 str Service 
+class 5 0.7 str Shakespeare 
+class 5 0.7 str Sharp 
+class 5 0.7 str Shaw 
+class 5 0.7 str Shelley 
+class 5 0.7 str Sheridan 
+class 5 0.7 str Sherwood 
+class 5 0.7 str Sidney 
+class 5 0.7 str Silas 
+class 5 0.7 str Simon 
+class 5 0.7 str Simpson 
+class 5 0.7 str Sinclair 
+class 5 0.7 str Smedley 
+class 5 0.7 str Smith 
+class 5 0.7 str Smollett 
+class 5 0.7 str Snow 
+class 5 0.7 str Sonmerfield 
+class 5 0.7 str Sophia 
+class 5 0.7 str Sophy 
+class 5 0.7 str Southey 
+class 5 0.7 str Spencer 
+class 5 0.7 str Spender
+class 5 0.7 str Spenser 
+class 5 0.7 str Springhall 
+class 5 0.7 str Steele 
+class 5 0.7 str Steinbeck 
+class 5 0.7 str Stella 
+class 5 0.7 str Stephen 
+class 5 0.7 str Stephens 
+class 5 0.7 str Stevenson 
+class 5 0.7 str Stilwell 
+class 5 0.7 str Stone
+class 5 0.7 str Stowe 
+class 5 0.7 str Strachey 
+class 5 0.7 str Strong
+class 5 0.7 str Stuart 
+class 5 0.7 str Surrey 
+class 5 0.7 str Susan 
+class 5 0.7 str Susanna 
+class 5 0.7 str Swift 
+class 5 0.7 str Swinburne 
+class 5 0.7 str Symons
+class 5 0.7 str Tate
+class 5 0.7 str Taylor 
+class 5 0.7 str Ted 
+class 5 0.7 str Temple 
+class 5 0.7 str Tennyson 
+class 5 0.7 str Terry 
+class 5 0.7 str Thackeray
+class 5 0.7 str Thodore 
+class 5 0.7 str Theresa 
+class 5 0.7 str Thomas 
+class 5 0.7 str Thompson 
+class 5 0.7 str Thomson 
+class 5 0.7 str Thoreau 
+class 5 0.7 str Thorndike 
+class 5 0.7 str Timothy
+class 5 0.5 str Tim
+class 5 0.7 str Titus 
+class 5 0.7 str Tobias 
+class 5 0.7 str Toby 
+class 5 0.7 str Toland 
+class 5 0.7 str Tom 
+class 5 0.7 str Tomlinson
+class 5 0.7 str Tommy 
+class 5 0.7 str Tony 
+class 5 0.7 str Tours 
+class 5 0.7 str Tout 
+class 5 0.7 str Toynbee 
+class 5 0.7 str Tracy 
+class 5 0.7 str Trevelyan 
+class 5 0.7 str Trollpoe
+class 5 0.7 str Truman 
+class 5 0.7 str Turner 
+class 5 0.7 str Tuttle 
+class 5 0.7 str Twain 
+class 5 0.7 str Tyler 
+class 5 0.7 str Ulysses 
+class 5 0.7 str Valentine 
+class 5 0.7 str Van 
+class 5 0.7 str Vaughan 
+class 5 0.7 str Veblen 
+class 5 0.7 str Victor 
+class 5 0.7 str Vincent 
+class 5 0.7 str Violet 
+class 5 0.7 str Virginia 
+class 5 0.7 str Vogt
+class 5 0.7 str Wagner 
+class 5 0.7 str Walker 
+class 5 0.7 str Walkley 
+class 5 0.7 str Wallace 
+class 5 0.7 str Wallis 
+class 5 0.7 str Walpole
+class 5 0.7 str Walsh
+class 5 0.7 str Walter 
+class 5 0.7 str Walton 
+class 5 0.7 str Ward 
+class 5 0.7 str Warner 
+class 5 0.7 str Warren 
+class 5 0.7 str Wat 
+class 5 0.7 str Waters 
+class 5 0.7 str Watt 
+class 5 0.7 str Webb 
+class 5 0.7 str Webster 
+class 5 0.7 str Wells 
+class 5 0.7 str Wesley 
+class 5 0.7 str Wheatley 
+class 5 0.7 str Wheeler 
+class 5 0.7 str Whit 
+class 5 0.7 str Whitehead 
+class 5 0.7 str Whitman 
+class 5 0.7 str Whittier 
+class 5 0.7 str Whyet 
+class 5 0.7 str Wilcox 
+class 5 0.7 str Wild 
+class 5 0.7 str Wilde 
+class 5 0.7 str Wilhelmina 
+class 5 0.7 str Will 
+class 5 0.7 str Willard 
+class 5 0.7 str William 
+class 5 0.7 str Wilmot
+class 5 0.7 str Wilson 
+class 5 0.7 str Windsor 
+class 5 0.7 str Winifred 
+class 5 0.7 str Wodehous
+class 5 0.7 str Wolf 
+class 5 0.7 str Wollaston 
+class 5 0.7 str Wood 
+class 5 0.7 str Woolf 
+class 5 0.7 str Woolley 
+class 5 0.7 str Wordsworth 
+class 5 0.7 str Wright 
+class 5 0.7 str Wyat
+class 5 0.7 str Wyclif
+class 5 0.7 str Wyld
+class 5 0.7 str Yale 
+class 5 0.7 str Yeates 
+class 5 0.7 str Yerkes 
+class 5 0.7 str Young 
+class 5 0.7 str Yule 
+class 5 0.7 str Zacharias 
+class 5 0.7 str Zangwill 
+class 5 0.7 str Zechariah 
+class 5 0.7 str Zephaniah 
+class 5 0.7 str Zimmerman 

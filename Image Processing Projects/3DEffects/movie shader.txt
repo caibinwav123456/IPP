@@ -1,0 +1,495 @@
+--------------------------------------------------//使用说明:
+      这个文本文件movie shader.txt中包含了几个象素着色器，每两个之间用“－－－－－－－－//（名称）”隔开。强烈推荐“波浪”着色器（震撼的效果）。使用方法如下：
+      先保证装了dx9，然后在查看－>选项－>回放－>输出里选中“VMR9（无转换）”和“使用纹理表面并以3D方式渲染视频”，然后打开“播放－>阴影－>编辑”（此时下面一串已有的效果应该是亮的，如果是灰的就说明没配置好）把一个着色代码拷进去，选择版本ps－2.0（当然显卡不能比ps－2.0还北，查看D3D Caps Viewer），下面会显示编译成功，起个名字，保存一下，再打开一个视频文件，并选中启用那个阴影，就可以观看了。
+-----------------------------//反演
+sampler s0 : register(s0);
+float4 p0 : register(c0);
+float4 p1 : register(c1);
+
+#define width (p0[0])
+#define height (p0[1])
+#define counter (p0[2])
+#define clock (p0[3])
+#define one_over_width (p1[0])
+#define one_over_height (p1[1])
+
+#define PI acos(-1)
+
+float4 main(float2 tex : TEXCOORD0) : COLOR
+{
+	tex-=float2(0.5,0.5);
+
+	float com=tex.x*tex.x+tex.y*tex.y;
+	tex.x/=com*16;
+	tex.y/=com*16;
+	
+	tex+=float2(0.5,0.5);
+	float4 c0 = tex2D(s0, tex);
+	if(tex.x<0||tex.x>1||tex.y<0||tex.y>1)c0=float4(1,1,1,1);
+	return c0;
+}
+--------------------------------//漩涡
+sampler s0 : register(s0);
+float4 p0 : register(c0);
+float4 p1 : register(c1);
+
+#define width (p0[0])
+#define height (p0[1])
+#define counter (p0[2])
+#define clock (p0[3])
+#define one_over_width (p1[0])
+#define one_over_height (p1[1])
+#define SPLIT 20
+#define PI acos(-1)
+#define SPEED 10
+
+float4 main(float2 tex : TEXCOORD0) : COLOR
+{
+	float2 xy=tex-float2(0.5,0.5);
+	float theta=0,rx=length(xy);
+
+	theta=atan2(xy.y,xy.x);
+
+	float pace=frac(clock/20)*2-1;
+	float pace1=abs(pace);
+	pace=pace/(1-pace1);
+	theta+=(0.75-rx)*pace*SPEED;//
+
+	rx*=1+abs(pace);//
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+	float4 c0;
+	float2 c,s;
+	float2 theta2=float2(theta,SPLIT*theta);
+	sincos(theta2,s,c);
+	tex=float2(rx*s.x,rx*c.x)+float2(0.5,0.5);
+
+	c0= tex2D(s0, tex);//theta*=SPLIT;
+	c0*=1+s.y*0.4*pace1;//if(frac(stag/2)>0.5)
+			
+	return c0;
+}
+
+--------------------------------------------//两边灌入
+sampler s0 : register(s0);
+float4 p0 : register(c0);
+float4 p1 : register(c1);
+
+#define width (p0[0])
+#define height (p0[1])
+#define counter (p0[2])
+#define clock (p0[3])
+#define one_over_width (p1[0])
+#define one_over_height (p1[1])
+
+#define PI acos(-1)
+
+float4 main(float2 tex : TEXCOORD0) : COLOR
+{	
+	float CLAMP=frac(clock/2); 
+	
+	float4 c0 = 0;
+	
+	if(tex.x <= min(CLAMP,1-CLAMP))
+	{
+		tex.x=min(CLAMP,1-CLAMP);
+	}
+	else if(tex.x>=max(CLAMP,1-CLAMP))
+	{
+		tex.x=max(CLAMP,1-CLAMP);
+	}
+		
+	c0 = tex2D(s0, tex);
+		
+	return c0;
+}
+---------------------------------------//一边灌入
+sampler s0 : register(s0);
+float4 p0 : register(c0);
+float4 p1 : register(c1);
+
+#define width (p0[0])
+#define height (p0[1])
+#define counter (p0[2])
+#define clock (p0[3])
+#define one_over_width (p1[0])
+#define one_over_height (p1[1])
+
+#define PI acos(-1)
+
+float4 main(float2 tex : TEXCOORD0) : COLOR
+{	
+	float CLAMP=frac(clock/2)*2; 
+	float F=frac(CLAMP);
+	
+	float4 c0 = 0;
+	
+	if(tex.x <=F&&CLAMP>1)
+	{
+		tex.x=F;
+	}
+	else if(tex.x >=F&&CLAMP<1)
+	{
+		tex.x=F;
+	}
+		
+	c0 = tex2D(s0, tex);
+		
+	return c0;
+}
+----------------------------------------------波浪
+sampler s0 : register(s0);
+float4 p0 : register(c0);
+float4 p1 : register(c1);
+
+#define width (p0[0])
+#define height (p0[1])
+#define counter (p0[2])
+#define clock (p0[3])
+#define one_over_width (p1[0])
+#define one_over_height (p1[1])
+#define speed 8
+#define bias 0.03
+#define PI acos(-1)
+
+float4 main(float2 tex : TEXCOORD0) : COLOR
+{
+	float t=frac(clock/8)*2*PI;
+	float2 tex1=tex-float2(0.5,0.5);
+	tex1*=float2(width/60,height/60);
+	float2 pd=cos(dot(tex1,tex1)-speed*t)*tex1;
+	float3 n=normalize(float3(pd.x,pd.y,10));
+	tex+=pd*bias;
+	float theta=t;
+	float3 l=float3(0,0,0.8);float3 crot=float3(theta+PI*0.666,theta,theta-PI*0.666);
+	sincos(t,l.y,l.x);
+	crot=(cos(crot)+float3(1,1,1))/2;
+	float4 cl=0;cl.xyz=crot;
+	float CL=dot(n, l);
+	float4 c0 = 0;
+	c0 = cl * (pow(CL+0.02,50)+tex2D(s0,tex)*CL);
+	return c0;
+}
+------------------------------------------------------//水晶球（由球面化改编而成）
+sampler s0 : register(s0);
+float4 p0 : register(c0);
+float4 p1 : register(c1);
+
+#define width (p0[0])
+#define height (p0[1])
+#define counter (p0[2])
+#define clock (p0[3])
+#define one_over_width (p1[0])
+#define one_over_height (p1[1])
+
+#define PI acos(-1)
+
+float4 main(float2 tex : TEXCOORD0) : COLOR
+{
+	float time=frac(clock/20)*2*PI;
+	float2 angle=float2(time,10*time);
+	float2 Si,Co;
+	sincos(angle,Si,Co);
+	float2x2 mat1={Co.y,-Si.y,Si.y,Co.y};
+	float2x2 mat2={Co.x,-Si.x,Si.x,Co.x};
+
+	//float3x3 mat1=0;//{Co.y,0,-Si.y,0,1,0,Si.y,0,Co.y};//0;//0;//
+	//float3x3 mat2=0;//{1,0,0,0,Co.x,-Si.x,0,Si.x,Co.x};
+
+	//float3x3 mat=mul(mat1,mat2);
+
+	float3 pl = float3(0.577,-0.577,-0.577); // light pos
+	float4 cl = float4(0.5,0.5,0.5,0.5);//(0.8,0.2,0.2,0.2); // light color
+	
+	float2 pd = float2(tex.x-0.5, tex.y-0.5) ;
+	
+	float D =0.25-dot(pd,pd);// 4*A*C;
+	
+	float4 c0 = 0;
+	if(D>=0)
+		{
+		
+		float t = sqrt(D) ;
+		
+		// intersection data
+		//float3 p = pc + pd*t;
+		float3 n =float3(pd.x,pd.y,-t)*2;
+		float3 l = pl;
+		float3 Re;
+		// mapping the image onto the sphere
+		float3 seek=reflect(float3(0,0,1),n);//mul(reflect(pd,n),mat);
+		Re=seek;//reflect(float3(0,0,1),n);
+		seek.yz=mul(mat2,seek.yz);seek.xz=mul(mat1,seek.xz);//float3(dot(vec1,seek),dot(vec2,seek),dot(vec3,seek));//
+		
+		bool b=(seek.z>0);
+		tex.xy=seek/seek.z;//*10;//*(time+0.1)*1;//acos(-n)/PI; 
+
+		// diffuse + specular
+		c0 = cl * pow(max(dot(l, Re)+0.02, 0),50);
+		float4 CL=dot(n, l) *cl;
+		if(tex.x>0&&tex.x<1&&tex.y>0&&tex.y<1&&b)// float2(frac(tex.x),frac(tex.y))
+			c0+=tex2D(s0,tex)*CL;//float4(0.5,0.5,0.5,0.5)  +reflect(pd, n)
+		else c0+=CL;//
+	}
+	return c0;
+}
+----------------------------------------------------------------//blob
+sampler s0 : register(s0);
+float4 p0 : register(c0);
+float4 p1 : register(c1);
+
+#define width (p0[0])
+#define height (p0[1])
+#define counter (p0[2])
+#define clock (p0[3])
+#define one_over_width (p1[0])
+#define one_over_height (p1[1])
+#define speed 4
+#define bias 0.03
+#define PI acos(-1)
+#define smooth 8
+#define size 0.15
+#define gate exp(-smooth*smooth*size*size)
+#define zoom smooth
+
+float4 main(float2 tex : TEXCOORD0) : COLOR
+{
+	float2 ratio=float2(zoom,zoom*height/width);
+	float4 c=tex2D(s0,tex);
+	float t=sin(frac(clock/speed)*2*PI);
+	float4 time=0.25*float4(t,0,-t,0);
+	float4 p=(tex.xyxy-float4(0.25,0.5,0.75,0.5)+time)*ratio.xyxy;
+	float2 d=-float2(dot(p.xy,p.xy),dot(p.zw,p.zw));
+	float2 e=exp(d);
+	float sigma=e.x+e.y;
+	float2 n0=float2(dot(e,p.xz),dot(e,p.yw))/sqrt(log(sigma/gate))/sigma;
+	float3 n=normalize(float3(n0.x,n0.y,1));
+	float2 shift=n.xy*n.z;
+	tex-=shift/ratio;
+	float3 l=normalize(float3(0.3,-0.3,1));
+	float4 cl=lerp(float4(0.75,0,0.75,0),float4(0.25,1,0.25,0),e.x/sigma);
+	float CL=dot(n, l);
+	float4 c0 = 0;
+	c0 = lerp(cl * (pow(CL,100)+tex2D(s0,tex)*CL),c,sigma/gate<1);
+	return c0;
+}
+-------------------------------------//rain
+sampler s0 : register(s0);
+float4 p0 : register(c0);
+float4 p1 : register(c1);
+
+#define width (p0[0])
+#define height (p0[1])
+#define counter (p0[2])
+#define clock (p0[3])
+#define one_over_width (p1[0])
+#define one_over_height (p1[1])
+#define speed 100.0
+#define lvl 0.//1
+#define wt float4(1,1,1,1)
+#define PI acos(-1)
+
+float4 main(float2 tex : TEXCOORD0) : COLOR
+{
+	float4 c0 =  tex2D(s0,tex);
+	float4 cl=float4(1,1,1,1);
+	float3 l=normalize(float3(0,0,2));//(1,1,2)
+	float time = clock/speed;
+	//float2 t=float2(time,time);
+	float2 p=tex*float2(1.5,1);
+	//p.x+=0.03*sin(p.x*10+time*speed*10);
+	float4 mat_t={10,-150,20,-220};//{100,0,0,0};
+	float2x4 mat_p={123,-222,-157,132,-170,222,-53,245};//{123,-222,157,245,-170,222,-101,132};
+	mat_p/=10;
+	//mat_t/=10;
+	float4 sigma=time*mat_t+mul(p,mat_p);
+	float s=dot(sin(sigma),wt);
+	float2 ds=mul(cos(sigma)*wt,transpose(mat_p));
+	float2 final=ds/2/sqrt(s-lvl);
+	float3 n=normalize(float3(final.x,final.y,1));
+	float2 shift=n.xy*n.z*0.01;
+	float CL=dot(n, l);
+	if(s>lvl)c0=cl * (pow(CL,10)+lerp(tex2D(s0,tex-shift),1,1*CL));
+	return c0;
+}
+-----------------------------------------//double rain
+sampler s0 : register(s0);
+float4 p0 : register(c0);
+float4 p1 : register(c1);
+
+#define width (p0[0])
+#define height (p0[1])
+#define counter (p0[2])
+#define clock (p0[3])
+#define one_over_width (p1[0])
+#define one_over_height (p1[1])
+#define speed 100.0
+#define lvl -1.//1
+#define wt float4(1,1,1,1)
+#define PI acos(-1)
+
+float4 main(float2 tex : TEXCOORD0) : COLOR
+{
+	float4 c0 =  tex2D(s0,tex);
+	float4 cl=float4(1,1,1,1);
+	float3 l=normalize(float3(0,0,2));//(1,1,2)
+	float time = clock/speed;
+	//float2 t=float2(time,time);
+	float2 p=tex*float2(-2.5,2.5);
+	float4 mat_t={100,-150,200,-220};//{100,0,0,0};
+	float2x4 mat_p={123,-222,157,0,-170,222,-53,132};//{123,-222,157,245,-170,222,-101,132};
+	mat_p/=10;
+	//mat_t/=1;
+	float4 sigma=time*mat_t+mul(p,mat_p);
+	float s=dot(sin(sigma),wt);
+	float2 ds=mul(cos(sigma)*wt,transpose(mat_p));
+	float2 final=ds/2/sqrt(s-lvl);
+	float3 n=normalize(float3(final.x,final.y,1));
+	float2 shift=n.xy*n.z*0.01;
+	float CL=dot(n, l);
+	if(s>lvl)c0=cl * (pow(CL,100)+lerp(tex2D(s0,tex-shift),1,3*CL));
+	return c0;
+}
+--------------------------------------//ext rain
+sampler s0 : register(s0);
+float4 p0 : register(c0);
+float4 p1 : register(c1);
+
+#define width (p0[0])
+#define height (p0[1])
+#define counter (p0[2])
+#define clock (p0[3])
+#define one_over_width (p1[0])
+#define one_over_height (p1[1])
+#define speed 100.0
+#define lvl 0.//1
+#define wt float4(1,1,1,1)
+#define PI acos(-1)
+
+float4 main(float2 tex : TEXCOORD0) : COLOR
+{
+	float4 c0 =  tex2D(s0,tex);
+	float4 cl=float4(1,1,1,1);
+	float3 l=normalize(float3(0,0,2));//(1,1,2)
+	float time = clock/speed;
+	
+	float3 p=float3(tex,time);
+	float2x4 mat_p1={12.3,-22.2,-15.7,13.2,-17.0,22.2,-5.3,24.5};
+	float2x4 mat_p2={12.3,-22.2,-15.7,13.2,-17.0,22.2,-5.3,24.5};
+	float4 mat_t1={100,-150,200,-220};
+	float4 mat_t2={100,-150,200,-220};
+	float3x4 mat_1=float3x4(mat_p1,mat_t1);
+	float3x4 mat_2=float3x4(mat_p2,mat_t2);
+	float4 r1=mul(p,mat_1);
+	float4 r2=mul(p,mat_2);
+	float4 s1,s2,c1,c2;
+	sincos(r1,s1,c1);
+	sincos(r2,s2,c2);
+	float sigma1=dot(s1*s2,wt);
+	float2 sigma2=mul(wt*s1*c2,transpose(mat_p2))+mul(wt*s2*c1,transpose(mat_p1));
+	
+	//float4 mat_t={100,-150,200,-220};{100,0,0,0};
+	//float2x4 mat_p={123,-222,-157,132,-170,222,-53,245};//{123,-222,157,245,-170,222,-101,132};
+
+	float2 final=sigma2/sqrt(sigma1-lvl);
+	float3 n=normalize(float3(final.x,final.y,1));
+	float2 shift=n.xy*n.z*0.01;
+	float CL=dot(n, l);
+	if(sigma1>lvl)c0=cl * (pow(CL,10)+lerp(tex2D(s0,tex-shift),1,1*CL));
+	return c0;
+}
+-----------------------------------------//milk
+sampler s0 : register(s0);
+float4 p0 : register(c0);
+float4 p1 : register(c1);
+
+#define width (p0[0])
+#define height (p0[1])
+#define counter (p0[2])
+#define clock (p0[3])
+#define one_over_width (p1[0])
+#define one_over_height (p1[1])
+#define speed 100.0
+#define lvl 0.//1
+#define wt float4(1,1,1,1)
+#define PI acos(-1)
+
+float4 main(float2 tex : TEXCOORD0) : COLOR
+{
+	float4 c0 =  tex2D(s0,tex);
+	float4 cl=float4(0.74,0.8,0.63,1);
+	float3 l=normalize(float3(0,0,2));//(1,1,2)
+	float time = clock/speed;
+	//float2 t=float2(time,time);
+	float2 p=tex*float2(1.4,1);
+	float4 mat_t={100,-150,200,-220};//{100,0,0,0};
+	float2x4 mat_p={123,-222,157,132,-170,222,-53,245};//{123,-222,157,245,-170,222,-101,132};
+	mat_p/=10;
+	//mat_t/=1;
+	float4 sigma=time*mat_t+mul(p,mat_p);
+	float s=dot(sin(sigma),wt);
+	float2 ds=mul(cos(sigma)*wt,transpose(mat_p));
+	float2 final=ds/2/sqrt(s-lvl);
+	float3 n=normalize(float3(final.x,final.y,1));
+	float2 shift=n.xy*n.z*0.01;
+	float CL=dot(n, l);
+	if(s>lvl)c0=cl * (pow(CL,100)+lerp(tex2D(s0,tex-shift)*0.1,1,12*CL));
+	return c0;
+}
+----------------------------------------//边缘检测
+sampler s0 : register(s0);
+float4 p0 : register(c0);
+float4 p1 : register(c1);
+
+#define width (p0[0])
+#define height (p0[1])
+#define counter (p0[2])
+#define clock (p0[3])
+#define one_over_width (p1[0])
+#define one_over_height (p1[1])
+#define speed 100.0
+#define lvl 0.//1
+#define wt float4(1,1,1,1)
+#define PI acos(-1)
+#define th 0
+#define tj  float4(1,1,1,1)*th
+float4 main(float2 tex : TEXCOORD0) : COLOR
+{
+	float2 shift=float2(1./width,1./height)*3;
+	float4 spl[4];
+	float4 result=0;
+	for(int i=-1;i<3;i++)
+	{
+		spl[i+1].x=tex2D(s0,tex+shift*float2(-1,i)).g;
+		spl[i+1].y=tex2D(s0,tex+shift*float2(0,i)).g;
+		spl[i+1].z=tex2D(s0,tex+shift*float2(1,i)).g;
+		spl[i+1].w=tex2D(s0,tex+shift*float2(2,i)).g;
+	}
+/*	float4 ext1,ext2;
+	ext1.x=tex2D(s0,tex+shift*float2(0,-2)).g;
+	ext1.y=tex2D(s0,tex+shift*float2(1,-2)).g;
+	ext1.z=tex2D(s0,tex+shift*float2(-2,0)).g;
+	ext1.w=tex2D(s0,tex+shift*float2(3,0)).g;
+	ext2.x=tex2D(s0,tex+shift*float2(-2,1)).g;
+	ext2.y=tex2D(s0,tex+shift*float2(3,1)).g;
+	ext2.z=tex2D(s0,tex+shift*float2(0,3)).g;
+	ext2.w=tex2D(s0,tex+shift*float2(1,3)).g;
+*/	float4x4 mat0={-1,-3,-1,0,0,-1,-3,-1,0,0,0,0,0,0,0,0};
+	float4x4 mat1={-3,16,-3,0,0,-3,16,-3,-1,-3,-1,0,0,-1,-3,-1};
+	float4x4 mat2={-1,-3,-1,0,0,-1,-3,-1,-3,16,-3,0,0,-3,16,-3};
+	float4x4 mat3={0,0,0,0,0,0,0,0,-1,-3,-1,0,0,-1,-3,-1};
+/*	float2x4 mate={-1,0,-1,0,0,-1,0,-1};
+	float2x4 mate2={-1,0,-1,0,0,-1,0,-1};
+*/	result+=mul(spl[0],transpose(mat0));
+	result+=mul(spl[1],transpose(mat1));
+	result+=mul(spl[2],transpose(mat2));
+	result+=mul(spl[3],transpose(mat3));
+/*	result.xy+=mul(ext1,mate);
+	result.zw+=mul(ext2,mate2);
+*/	float4 b1=(result>=tj);
+	float4 b2=(result<=tj);
+	float4 c0=float4(1,1,1,1);
+	if(b1.x*b1.y*b1.z*b1.w!=0||b2.x*b2.y*b2.z*b2.w!=0)
+	c0=float4(0,0,0,0);//if(tex.y>result.w/10)
+	return c0;
+}

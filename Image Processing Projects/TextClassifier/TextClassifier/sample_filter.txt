@@ -1,0 +1,7 @@
+attrib name
+
+class 0 0.5
+
+	str  hel 5
+	str  gel 2
+	str  hol 1
